@@ -1,0 +1,148 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo suave -->
+  <rect width="600" height="600" fill="#f5f0e6"/>
+
+  <!-- Sombra -->
+  <ellipse cx="300" cy="520" rx="200" ry="14" fill="#00000012"/>
+
+  <!-- Tela encerada con diseño de flores -->
+  <!-- Base de la tela (cuadrada con esquinas dobladas) -->
+  <path d="M120 160 L120 460 Q120 475 135 475 L465 475 Q480 475 480 460 L480 160 Z" fill="#f3e8d0" stroke="#d4c4a0" stroke-width="1"/>
+
+  <!-- Patrón de fondo: puntos pequeños -->
+  <g fill="#d4b87a" opacity="0.25">
+    <circle cx="160" cy="200" r="2"/>
+    <circle cx="200" cy="220" r="2"/>
+    <circle cx="240" cy="200" r="2"/>
+    <circle cx="280" cy="220" r="2"/>
+    <circle cx="320" cy="200" r="2"/>
+    <circle cx="360" cy="220" r="2"/>
+    <circle cx="400" cy="200" r="2"/>
+    <circle cx="440" cy="220" r="2"/>
+    <circle cx="160" cy="260" r="2"/>
+    <circle cx="200" cy="280" r="2"/>
+    <circle cx="240" cy="260" r="2"/>
+    <circle cx="280" cy="280" r="2"/>
+    <circle cx="320" cy="260" r="2"/>
+    <circle cx="360" cy="280" r="2"/>
+    <circle cx="400" cy="260" r="2"/>
+    <circle cx="440" cy="280" r="2"/>
+    <circle cx="160" cy="320" r="2"/>
+    <circle cx="200" cy="340" r="2"/>
+    <circle cx="240" cy="320" r="2"/>
+    <circle cx="280" cy="340" r="2"/>
+    <circle cx="320" cy="320" r="2"/>
+    <circle cx="360" cy="340" r="2"/>
+    <circle cx="400" cy="320" r="2"/>
+    <circle cx="440" cy="340" r="2"/>
+    <circle cx="160" cy="380" r="2"/>
+    <circle cx="200" cy="400" r="2"/>
+    <circle cx="240" cy="380" r="2"/>
+    <circle cx="280" cy="400" r="2"/>
+    <circle cx="320" cy="380" r="2"/>
+    <circle cx="360" cy="400" r="2"/>
+    <circle cx="400" cy="380" r="2"/>
+    <circle cx="440" cy="400" r="2"/>
+    <circle cx="160" cy="440" r="2"/>
+    <circle cx="200" cy="430" r="2"/>
+    <circle cx="240" cy="440" r="2"/>
+    <circle cx="280" cy="430" r="2"/>
+    <circle cx="320" cy="440" r="2"/>
+    <circle cx="360" cy="430" r="2"/>
+    <circle cx="400" cy="440" r="2"/>
+    <circle cx="440" cy="430" r="2"/>
+  </g>
+
+  <!-- Flores grandes distribuidas -->
+  <!-- Flor 1 -->
+  <g transform="translate(200 240)">
+    <circle cx="0" cy="-14" r="11" fill="#e8a0bf" opacity="0.85"/>
+    <circle cx="13" cy="-7" r="11" fill="#e8a0bf" opacity="0.85"/>
+    <circle cx="14" cy="8" r="11" fill="#e8a0bf" opacity="0.85"/>
+    <circle cx="-14" cy="8" r="11" fill="#e8a0bf" opacity="0.85"/>
+    <circle cx="-13" cy="-7" r="11" fill="#e8a0bf" opacity="0.85"/>
+    <circle cx="0" cy="0" r="8" fill="#f5c43e"/>
+    <circle cx="0" cy="0" r="4" fill="#d49a20"/>
+  </g>
+
+  <!-- Flor 2 -->
+  <g transform="translate(380 250)">
+    <circle cx="0" cy="-14" r="11" fill="#c4a8e8" opacity="0.85"/>
+    <circle cx="13" cy="-7" r="11" fill="#c4a8e8" opacity="0.85"/>
+    <circle cx="14" cy="8" r="11" fill="#c4a8e8" opacity="0.85"/>
+    <circle cx="-14" cy="8" r="11" fill="#c4a8e8" opacity="0.85"/>
+    <circle cx="-13" cy="-7" r="11" fill="#c4a8e8" opacity="0.85"/>
+    <circle cx="0" cy="0" r="8" fill="#f5c43e"/>
+    <circle cx="0" cy="0" r="4" fill="#d49a20"/>
+  </g>
+
+  <!-- Flor 3 -->
+  <g transform="translate(300 340)">
+    <circle cx="0" cy="-16" r="13" fill="#e8a0bf" opacity="0.85"/>
+    <circle cx="15" cy="-8" r="13" fill="#e8a0bf" opacity="0.85"/>
+    <circle cx="16" cy="9" r="13" fill="#e8a0bf" opacity="0.85"/>
+    <circle cx="-16" cy="9" r="13" fill="#e8a0bf" opacity="0.85"/>
+    <circle cx="-15" cy="-8" r="13" fill="#e8a0bf" opacity="0.85"/>
+    <circle cx="0" cy="0" r="9" fill="#f5c43e"/>
+    <circle cx="0" cy="0" r="5" fill="#d49a20"/>
+  </g>
+
+  <!-- Flor 4 -->
+  <g transform="translate(180 400)">
+    <circle cx="0" cy="-12" r="10" fill="#c4a8e8" opacity="0.85"/>
+    <circle cx="11" cy="-6" r="10" fill="#c4a8e8" opacity="0.85"/>
+    <circle cx="12" cy="7" r="10" fill="#c4a8e8" opacity="0.85"/>
+    <circle cx="-12" cy="7" r="10" fill="#c4a8e8" opacity="0.85"/>
+    <circle cx="-11" cy="-6" r="10" fill="#c4a8e8" opacity="0.85"/>
+    <circle cx="0" cy="0" r="7" fill="#f5c43e"/>
+    <circle cx="0" cy="0" r="3.5" fill="#d49a20"/>
+  </g>
+
+  <!-- Flor 5 -->
+  <g transform="translate(420 390)">
+    <circle cx="0" cy="-12" r="10" fill="#e8a0bf" opacity="0.85"/>
+    <circle cx="11" cy="-6" r="10" fill="#e8a0bf" opacity="0.85"/>
+    <circle cx="12" cy="7" r="10" fill="#e8a0bf" opacity="0.85"/>
+    <circle cx="-12" cy="7" r="10" fill="#e8a0bf" opacity="0.85"/>
+    <circle cx="-11" cy="-6" r="10" fill="#e8a0bf" opacity="0.85"/>
+    <circle cx="0" cy="0" r="7" fill="#f5c43e"/>
+    <circle cx="0" cy="0" r="3.5" fill="#d49a20"/>
+  </g>
+
+  <!-- Flor 6 pequeña -->
+  <g transform="translate(260 190) scale(0.7)">
+    <circle cx="0" cy="-14" r="11" fill="#c4a8e8" opacity="0.85"/>
+    <circle cx="13" cy="-7" r="11" fill="#c4a8e8" opacity="0.85"/>
+    <circle cx="14" cy="8" r="11" fill="#c4a8e8" opacity="0.85"/>
+    <circle cx="-14" cy="8" r="11" fill="#c4a8e8" opacity="0.85"/>
+    <circle cx="-13" cy="-7" r="11" fill="#c4a8e8" opacity="0.85"/>
+    <circle cx="0" cy="0" r="8" fill="#f5c43e"/>
+    <circle cx="0" cy="0" r="4" fill="#d49a20"/>
+  </g>
+
+  <!-- Hojas decorativas -->
+  <g opacity="0.5">
+    <path d="M250 230 C240 235 238 245 242 255 C248 250 252 240 250 230 Z" fill="#5a8a3e"/>
+    <path d="M340 230 C350 235 352 245 348 255 C342 250 338 240 340 230 Z" fill="#5a8a3e"/>
+    <path d="M230 360 C220 365 218 375 222 385 C228 380 232 370 230 360 Z" fill="#5a8a3e"/>
+    <path d="M370 370 C380 375 382 385 378 395 C372 390 368 380 370 370 Z" fill="#5a8a3e"/>
+    <path d="M150 280 C142 285 140 295 144 305 C150 300 154 290 150 280 Z" fill="#5a8a3e"/>
+    <path d="M450 300 C442 305 440 315 444 325 C450 320 454 310 450 300 Z" fill="#5a8a3e"/>
+  </g>
+
+  <!-- Esquina doblada superior izquierda -->
+  <path d="M120 160 L160 160 L120 200 Z" fill="#e0d0b0" opacity="0.8"/>
+  <path d="M120 160 L160 160 L150 170 L130 170 L120 190 Z" fill="#d4c4a0" opacity="0.5"/>
+
+  <!-- Esquina doblada inferior derecha -->
+  <path d="M480 460 L440 475 L480 475 Z" fill="#e0d0b0" opacity="0.8"/>
+  <path d="M460 475 L480 475 L480 460 Z" fill="#d4c4a0" opacity="0.6"/>
+
+  <!-- Brillo de cera (efecto satinado) -->
+  <path d="M140 180 L140 460 Q140 468 148 470 L160 470 L160 180 Z" fill="#ffffff" opacity="0.12"/>
+  <path d="M440 180 L440 460 L430 460 L430 180 Z" fill="#ffffff" opacity="0.06"/>
+
+  <!-- Etiqueta -->
+  <rect x="240" y="495" width="120" height="30" rx="6" fill="#fff9ef" stroke="#c9a84a" stroke-width="1"/>
+  <text x="300" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#3a5a2e">TELA ENCERADA 10×10</text>
+</svg>
