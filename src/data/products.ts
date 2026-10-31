@@ -74,39 +74,39 @@ export const PRODUCTS: Product[] = [
     name: 'Tela Encerada 10×10 cm',
     category: 'tela',
     description:
-      'Tela encerada reutilizable para conservar alimentos. Ideal para envolver un limón, medio aguacate o snacks pequeños. Ecológica y duradera.',
+      'Tela encerada reutilizable con diseño de flores. Ideal para envolver un limón, medio aguacate o snacks pequeños. Ecológica y duradera.',
     price: 90,
     size: '10×10 cm',
     sizeDetail: 'Tela de 10×10 centímetros',
     image:
-      'https://images.pexels.com/photos/40119297/pexels-photo-40119297.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    badge: 'Ecológico',
+      'https://images.pexels.com/photos/11275072/pexels-photo-11275072.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    badge: 'Diseño de Flores',
   },
   {
     id: 'tela-20x20',
     name: 'Tela Encerada 20×20 cm',
     category: 'tela',
     description:
-      'Tamaño mediano para envolver cilantro, verduras o cubrir tazones. Mantén tus alimentos frescos sin plástico.',
+      'Tamaño mediano con diseño de limones. Perfecta para cubrir tazones, sándwiches y envolver frutas. Mantén tus alimentos frescos sin plástico.',
     price: 90,
     size: '20×20 cm',
     sizeDetail: 'Tela de 20×20 centímetros',
     image:
-      'https://images.pexels.com/photos/606540/pexels-photo-606540.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    badge: 'Ecológico',
+      'https://images.pexels.com/photos/17523166/pexels-photo-17523166.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    badge: 'Diseño de Limones',
   },
   {
     id: 'tela-40x30',
     name: 'Tela Encerada 40×30 cm',
     category: 'tela',
     description:
-      'Tamaño grande para envolver papaya, pan, queso o cubrir recipientes amplios. La alternativa sostenible al plástico de cocina.',
+      'Tamaño grande con diseño de abejas. Ideal para envolver papaya, pan, queso o cubrir recipientes amplios. La alternativa sostenible al plástico de cocina.',
     price: 90,
     size: '40×30 cm',
     sizeDetail: 'Tela de 40×30 centímetros',
     image:
-      'https://images.pexels.com/photos/6847789/pexels-photo-6847789.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    badge: 'Ecológico',
+      'https://images.pexels.com/photos/3735197/pexels-photo-3735197.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    badge: 'Diseño de Abejas',
   },
 ];
 
