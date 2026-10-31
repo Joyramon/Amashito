@@ -31,8 +31,7 @@ export function ProductCard({ product }: ProductCardProps) {
   const telaVariant = getTelaVariant(product);
 
   const handleAdd = () => {
-    if (qty === 0) return;
-    addItem(product, qty);
+    addItem(product, qty > 0 ? qty : 1);
     setJustAdded(true);
     setTimeout(() => setJustAdded(false), 600);
     setQty(0);
@@ -135,13 +134,10 @@ export function ProductCard({ product }: ProductCardProps) {
 
           <button
             onClick={handleAdd}
-            disabled={qty === 0}
             className={`flex flex-1 items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-bold transition-all active:scale-95 ${
               justAdded
                 ? 'bg-brand-green text-white'
-                : qty === 0
-                  ? 'cursor-not-allowed bg-stone-300 text-stone-500'
-                  : 'bg-brand-red text-white hover:bg-brand-red-light hover:shadow-lg'
+                : 'bg-brand-red text-white hover:bg-brand-red-light hover:shadow-lg'
             }`}
           >
             {justAdded ? (
