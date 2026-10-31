@@ -2,9 +2,10 @@
 
 ## Product intent & audience
 
-- Site showcasing **chicharrones** and **telas enceradas** (wax cloth wraps), likely a Mexican/Latin food-adjacent product catalog or gallery.
+- Site showcasing **chicharrones**, **telas enceradas** (wax cloth wraps), and **pasta de ajo** (artisanal garlic paste) — Mexican/Latin food product catalog or gallery.
 - Audience: Spanish-speaking users; content written in Spanish.
 - Product catalog includes distinct sizes of telas enceradas (10×10, 20×20, 40×30 cm) each associated with specific foods (limón, cilantro, papaya).
+- New product: "Pasta de Ajo con Mantequilla y Chile Amashito" — artisanal garlic paste with butter and amashito chile, $90 MXN per 220g jar.
 
 ## Brand personality & voice
 
@@ -18,17 +19,20 @@
 - Gallery includes a decorative row showing both tela encerada icons and chile icons together.
 - Custom SVG illustrations embedded directly; no external image dependencies for icons.
 - Card-based layout with consistent icon placement pattern across product types.
+- Spicy products show a "Picor Intenso" badge and a 3-flame heat-level indicator.
+- All products support add-to-cart interaction.
 
 ## Decisions, constraints & rationale
 
 - Framework: Vite + React with Tailwind CSS, Lucide React icons, `@/` path alias.
-- Custom SVG icons created inline rather than using Lucide for product-specific imagery (tela encerada wrapping food).
+- Custom SVG icons created inline rather than using Lucide for product-specific imagery.
 - Each tela size gets its own photo and icon matching a specific food: limón (yellow), cilantro (green), papaya (orange).
-- Product descriptions updated to mention the specific foods each size can wrap.
 - Icon placement mirrors existing chicharrón card pattern (upper-right corner) for visual consistency.
+- Product categories used: chicharrones, telas enceradas, pasta de ajo.
+- New pasta product priced at $90 MXN / 220g jar, categorized under "Pasta de Ajo".
 
 ## Open questions & assumptions
 
-- Assumes the project already had chicharrón cards with chile icons that this pattern follows.
 - Assumes product images are sourced/available; exact image sourcing method unclear.
 - No explicit color palette or typography decisions documented yet — inferred from implementation context only.
+- Heat-level / picor badge system may need extension if more spicy products are added.

@@ -57,6 +57,20 @@ export const PRODUCTS: Product[] = [
     spiceLevel: 3,
   },
   {
+    id: 'pasta-ajo-mantequilla-amashito',
+    name: 'Pasta de Ajo con Mantequilla y Chile Amashito',
+    category: 'pasta',
+    description:
+      'Ajo seleccionado molido a mano con mantequilla y chile amashito tabasqueño. Untable, cremosa y con un picor intenso. Ideal para pan, mariscos, carnes o marinar. Sabor artesanal con tradición mexicana.',
+    price: 90,
+    size: '220 g',
+    sizeDetail: 'Frasco de 220 gramos',
+    image:
+      'https://images.pexels.com/photos/37225240/pexels-photo-37225240.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    badge: 'Picor Intenso',
+    spiceLevel: 3,
+  },
+  {
     id: 'pasta-ajo',
     name: 'Pasta de Ajo Artesanal',
     category: 'pasta',
