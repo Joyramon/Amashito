@@ -7,6 +7,7 @@ import { Footer } from '@/components/Footer';
 import { CartDrawer } from '@/components/CartDrawer';
 import { CheckoutPage } from '@/components/CheckoutPage';
 import { UsageGuideSection } from '@/components/UsageGuideSection';
+import { GarlicButterFeature } from '@/components/GarlicButterFeature';
 
 function AppContent() {
   const { checkoutMode } = useCart();
@@ -34,6 +35,7 @@ function AppContent() {
       <main>
         <Hero onShopNow={() => scrollToSection('productos')} />
         <ProductGallery />
+        <GarlicButterFeature />
         <UsageGuideSection />
         <StorySection />
       </main>
