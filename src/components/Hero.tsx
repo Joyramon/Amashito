@@ -1,4 +1,5 @@
 import { Flame, Truck, Leaf, Sparkles } from 'lucide-react';
+import { AmashitoModal } from '@/components/AmashitoModal';
 
 interface HeroProps {
   onShopNow: () => void;
@@ -62,6 +63,10 @@ export function Hero({ onShopNow }: HeroProps) {
               >
                 Ver en Instagram
               </a>
+            </div>
+
+            <div className="mt-2">
+              <AmashitoModal />
             </div>
 
             {/* Features */}
