@@ -65,8 +65,7 @@ export const PRODUCTS: Product[] = [
     price: 90,
     size: '220 g',
     sizeDetail: 'Frasco de 220 gramos',
-    image:
-      'https://images.pexels.com/photos/36453286/pexels-photo-36453286.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: '/pasta-ajo-mantequilla.png',
     badge: 'Picor Intenso',
     spiceLevel: 3,
   },
@@ -79,8 +78,7 @@ export const PRODUCTS: Product[] = [
     price: 90,
     size: '220 g',
     sizeDetail: 'Frasco de 220 gramos',
-    image:
-      'https://images.pexels.com/photos/38826528/pexels-photo-38826528.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: '/pasta-ajo-mantequilla.png',
     badge: 'Hecho a mano',
   },
   {
