@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { X, Trash2, Plus, Minus, ShoppingBag, Truck, CreditCard, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { useEffect } from 'react';
+import { X, Trash2, Plus, Minus, ShoppingBag, Truck, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 
 export function CartDrawer() {
@@ -11,18 +11,8 @@ export function CartDrawer() {
     updateQuantity,
     totalItems,
     totalPrice,
-    clearCart,
+    goToCheckout,
   } = useCart();
-
-  const [checkingOut, setCheckingOut] = useState(false);
-  const [orderComplete, setOrderComplete] = useState(false);
-
-  useEffect(() => {
-    if (isOpen) {
-      setCheckingOut(false);
-      setOrderComplete(false);
-    }
-  }, [isOpen]);
 
   useEffect(() => {
     if (isOpen) {
@@ -40,15 +30,6 @@ export function CartDrawer() {
   const shipping = totalPrice >= 500 ? 0 : totalPrice > 0 ? 80 : 0;
   const grandTotal = totalPrice + shipping;
 
-  const handleCheckout = () => {
-    setCheckingOut(true);
-    setTimeout(() => {
-      setCheckingOut(false);
-      setOrderComplete(true);
-      clearCart();
-    }, 1800);
-  };
-
   return (
     <>
       {/* Backdrop */}
@@ -63,10 +44,8 @@ export function CartDrawer() {
         <div className="flex items-center justify-between border-b border-stone-200 bg-brand-charcoal px-5 py-4">
           <div className="flex items-center gap-2">
             <ShoppingBag className="h-5 w-5 text-brand-gold" />
-            <h2 className="font-display text-xl text-white">
-              {orderComplete ? 'PEDIDO CONFIRMADO' : 'CARRITO'}
-            </h2>
-            {totalItems > 0 && !orderComplete && (
+            <h2 className="font-display text-xl text-white">CARRITO</h2>
+            {totalItems > 0 && (
               <span className="rounded-full bg-brand-red px-2 py-0.5 text-xs font-bold text-white">
                 {totalItems}
               </span>
@@ -81,24 +60,7 @@ export function CartDrawer() {
           </button>
         </div>
 
-        {orderComplete ? (
-          /* Pantalla de éxito */
-          <div className="flex flex-1 flex-col items-center justify-center gap-5 p-8 text-center">
-            <CheckCircle2 className="h-20 w-20 text-brand-green animate-pop" />
-            <h3 className="font-display text-3xl text-brand-charcoal">
-              ¡GRACIAS POR TU COMPRA!
-            </h3>
-            <p className="text-stone-600">
-              Tu pedido ha sido registrado. Te contactaremos pronto para coordinar el envío a toda la República Mexicana.
-            </p>
-            <button
-              onClick={closeCart}
-              className="mt-4 rounded-full bg-brand-red px-8 py-3 font-bold text-white transition hover:bg-brand-red-light"
-            >
-              Seguir comprando
-            </button>
-          </div>
-        ) : items.length === 0 ? (
+        {items.length === 0 ? (
           /* Carrito vacío */
           <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8 text-center">
             <ShoppingBag className="h-16 w-16 text-stone-300" />
@@ -222,21 +184,11 @@ export function CartDrawer() {
               </div>
 
               <button
-                onClick={handleCheckout}
-                disabled={checkingOut}
-                className="flex w-full items-center justify-center gap-2 rounded-full bg-brand-red py-3.5 font-bold text-white shadow-lg transition-all hover:bg-brand-red-light active:scale-95 disabled:opacity-70"
+                onClick={goToCheckout}
+                className="flex w-full items-center justify-center gap-2 rounded-full bg-brand-red py-3.5 font-bold text-white shadow-lg transition-all hover:bg-brand-red-light active:scale-95"
               >
-                {checkingOut ? (
-                  <>
-                    <div className="h-5 w-5 animate-spin rounded-full border-2 border-white/30 border-t-white" />
-                    Procesando...
-                  </>
-                ) : (
-                  <>
-                    <CreditCard className="h-5 w-5" />
-                    Pagar ${grandTotal}
-                  </>
-                )}
+                <ShoppingBag className="h-5 w-5" />
+                Completar pedido · ${grandTotal}
               </button>
 
               <div className="mt-3 flex items-center justify-center gap-1.5 text-xs text-stone-400">

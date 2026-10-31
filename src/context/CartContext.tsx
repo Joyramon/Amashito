@@ -24,6 +24,9 @@ interface CartContextValue {
   isOpen: boolean;
   openCart: () => void;
   closeCart: () => void;
+  checkoutMode: boolean;
+  goToCheckout: () => void;
+  exitCheckout: () => void;
 }
 
 const CartContext = createContext<CartContextValue | null>(null);
@@ -31,6 +34,7 @@ const CartContext = createContext<CartContextValue | null>(null);
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [checkoutMode, setCheckoutMode] = useState(false);
 
   const addItem = useCallback((product: Product, quantity = 1) => {
     setItems((prev) => {
@@ -65,6 +69,12 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const clearCart = useCallback(() => setItems([]), []);
   const openCart = useCallback(() => setIsOpen(true), []);
   const closeCart = useCallback(() => setIsOpen(false), []);
+  const goToCheckout = useCallback(() => {
+    setIsOpen(false);
+    setCheckoutMode(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+  const exitCheckout = useCallback(() => setCheckoutMode(false), []);
 
   const totalItems = useMemo(
     () => items.reduce((sum, i) => sum + i.quantity, 0),
@@ -86,6 +96,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
     isOpen,
     openCart,
     closeCart,
+    checkoutMode,
+    goToCheckout,
+    exitCheckout,
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
