@@ -3,6 +3,7 @@ import { Plus, Minus, ShoppingCart, Flame } from 'lucide-react';
 import type { Product } from '@/data/products';
 import { useCart } from '@/context/CartContext';
 import { ChileIcon } from '@/components/ChileIcon';
+import { TelaEnceradaIcon } from '@/components/TelaEnceradaIcon';
 
 interface ProductCardProps {
   product: Product;
@@ -15,11 +16,19 @@ function getChileVariant(product: Product): 'jalapeno' | 'serrano' | 'habanero' 
   return null;
 }
 
+function getTelaVariant(product: Product): 'small' | 'medium' | 'large' | null {
+  if (product.id === 'tela-10x10') return 'small';
+  if (product.id === 'tela-20x20') return 'medium';
+  if (product.id === 'tela-40x30') return 'large';
+  return null;
+}
+
 export function ProductCard({ product }: ProductCardProps) {
   const { addItem } = useCart();
   const [qty, setQty] = useState(0);
   const [justAdded, setJustAdded] = useState(false);
   const chileVariant = getChileVariant(product);
+  const telaVariant = getTelaVariant(product);
 
   const handleAdd = () => {
     if (qty === 0) return;
@@ -47,10 +56,15 @@ export function ProductCard({ product }: ProductCardProps) {
           </span>
         )}
 
-        {/* Chile icon overlay */}
+        {/* Chile / Tela icon overlay */}
         {chileVariant && (
           <div className="absolute right-4 top-4 rounded-full bg-white/90 p-1 shadow-lg backdrop-blur">
             <ChileIcon variant={chileVariant} className="h-10 w-10" />
+          </div>
+        )}
+        {telaVariant && (
+          <div className="absolute right-4 top-4 rounded-full bg-white/90 p-1 shadow-lg backdrop-blur">
+            <TelaEnceradaIcon variant={telaVariant} className="h-10 w-10" />
           </div>
         )}
 

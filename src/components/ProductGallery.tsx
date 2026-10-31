@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { PRODUCTS, CATEGORY_LABELS, type ProductCategory } from '@/data/products';
 import { ProductCard } from '@/components/ProductCard';
 import { ChileIcon } from '@/components/ChileIcon';
+import { TelaEnceradaIcon } from '@/components/TelaEnceradaIcon';
 
 type Filter = 'all' | ProductCategory;
 
@@ -36,11 +37,14 @@ export function ProductGallery() {
           </p>
         </div>
 
-        {/* Iconos de chile decorativos */}
+        {/* Iconos de chile y tela encerada decorativos */}
         <div className="mb-10 flex items-center justify-center gap-4">
           <ChileIcon variant="jalapeno" className="h-10 w-10" />
           <ChileIcon variant="serrano" className="h-10 w-10" />
           <ChileIcon variant="habanero" className="h-10 w-10" />
+          <TelaEnceradaIcon variant="small" className="h-10 w-10" />
+          <TelaEnceradaIcon variant="medium" className="h-10 w-10" />
+          <TelaEnceradaIcon variant="large" className="h-10 w-10" />
         </div>
 
         {/* Filtros */}
