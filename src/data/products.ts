@@ -92,8 +92,7 @@ export const PRODUCTS: Product[] = [
     price: 90,
     size: '10×10 cm',
     sizeDetail: 'Tela de 10×10 centímetros',
-    image:
-      'https://images.pexels.com/photos/5843555/pexels-photo-5843555.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: '/tela-encerada.png',
     badge: 'Diseño de Flores',
   },
   {
@@ -105,8 +104,7 @@ export const PRODUCTS: Product[] = [
     price: 90,
     size: '20×20 cm',
     sizeDetail: 'Tela de 20×20 centímetros',
-    image:
-      'https://images.pexels.com/photos/17523166/pexels-photo-17523166.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: '/tela-encerada.png',
     badge: 'Diseño de Limones',
   },
   {
@@ -118,8 +116,7 @@ export const PRODUCTS: Product[] = [
     price: 90,
     size: '40×30 cm',
     sizeDetail: 'Tela de 40×30 centímetros',
-    image:
-      'https://images.pexels.com/photos/3735197/pexels-photo-3735197.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: '/tela-encerada.png',
     badge: 'Diseño de Abejas',
   },
 ];
