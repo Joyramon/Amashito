@@ -17,7 +17,7 @@ const NAV_ITEMS = [
 export function Navbar({ onNavigate }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { totalItems, openCart } = useCart();
+  const { totalItems, openCart, checkoutMode, exitCheckout } = useCart();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -26,6 +26,10 @@ export function Navbar({ onNavigate }: NavbarProps) {
   }, []);
 
   const handleNav = (id: string) => {
+    if (checkoutMode) {
+      exitCheckout();
+      return;
+    }
     onNavigate(id);
     setMobileOpen(false);
   };
