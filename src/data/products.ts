@@ -65,7 +65,8 @@ export const PRODUCTS: Product[] = [
     price: 90,
     size: '220 g',
     sizeDetail: 'Frasco de 220 gramos',
-    image: '/pasta-ajo-amashito.svg',
+    image:
+      'https://images.pexels.com/photos/36453286/pexels-photo-36453286.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     badge: 'Picor Intenso',
     spiceLevel: 3,
   },
@@ -78,7 +79,8 @@ export const PRODUCTS: Product[] = [
     price: 90,
     size: '220 g',
     sizeDetail: 'Frasco de 220 gramos',
-    image: '/pasta-ajo.svg',
+    image:
+      'https://images.pexels.com/photos/38826528/pexels-photo-38826528.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     badge: 'Hecho a mano',
   },
   {
@@ -90,7 +92,8 @@ export const PRODUCTS: Product[] = [
     price: 90,
     size: '10×10 cm',
     sizeDetail: 'Tela de 10×10 centímetros',
-    image: '/tela-flores.svg',
+    image:
+      'https://images.pexels.com/photos/5843555/pexels-photo-5843555.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     badge: 'Diseño de Flores',
   },
   {
