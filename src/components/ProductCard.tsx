@@ -17,15 +17,16 @@ function getChileVariant(product: Product): 'jalapeno' | 'serrano' | 'habanero' 
 
 export function ProductCard({ product }: ProductCardProps) {
   const { addItem } = useCart();
-  const [qty, setQty] = useState(1);
+  const [qty, setQty] = useState(0);
   const [justAdded, setJustAdded] = useState(false);
   const chileVariant = getChileVariant(product);
 
   const handleAdd = () => {
+    if (qty === 0) return;
     addItem(product, qty);
     setJustAdded(true);
     setTimeout(() => setJustAdded(false), 600);
-    setQty(1);
+    setQty(0);
   };
 
   return (
@@ -100,7 +101,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="flex items-center gap-3 pt-2">
           <div className="flex items-center rounded-full border border-stone-200">
             <button
-              onClick={() => setQty((q) => Math.max(1, q - 1))}
+              onClick={() => setQty((q) => Math.max(0, q - 1))}
               className="flex h-9 w-9 items-center justify-center rounded-full text-stone-600 transition hover:bg-stone-100 active:scale-90"
               aria-label="Disminuir cantidad"
             >
@@ -120,10 +121,13 @@ export function ProductCard({ product }: ProductCardProps) {
 
           <button
             onClick={handleAdd}
+            disabled={qty === 0}
             className={`flex flex-1 items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-bold transition-all active:scale-95 ${
               justAdded
                 ? 'bg-brand-green text-white'
-                : 'bg-brand-red text-white hover:bg-brand-red-light hover:shadow-lg'
+                : qty === 0
+                  ? 'cursor-not-allowed bg-stone-300 text-stone-500'
+                  : 'bg-brand-red text-white hover:bg-brand-red-light hover:shadow-lg'
             }`}
           >
             {justAdded ? (
